@@ -1,5 +1,7 @@
 def move(my_list, direction):
+
     try:
+
         current_index = my_list.index(1)
     except ValueError:
         return my_list
@@ -18,8 +20,9 @@ def move(my_list, direction):
             my_list[current_index - 1] = 1
             
     return my_list
+
+# --- Test Cases ---
 print(f"move([0, 0, 0, 1, 0], 'right'): {move([0, 0, 0, 1, 0], 'right')}")
 print(f"move([0, 1, 0, 0, 0], 'left'):  {move([0, 1, 0, 0, 0], 'left')}")
-
 print(f"move([1, 0, 0, 0, 0], 'left'):  {move([1, 0, 0, 0, 0], 'left')}")
 print(f"move([0, 0, 0, 0, 1], 'right'): {move([0, 0, 0, 0, 1], 'right')}")
